@@ -19,16 +19,35 @@ void bubble_sort(int a[], int n)
 int main()
 {
 
-    int a[8] = {1, 6, 75, 34, 87, 45, 34, 65};
+    // int a[8] = {1, 6, 75, 34, 87, 45, 34, 65};
+    int n;
 
-    bubble_sort(a, 8);
+    printf("Enter value which you want to crete an array:");
+    scanf("%d", &n);
+    printf("\n");
 
-    printf("Sorted Array is \n");
+    int a[n];
 
-    for (int i = 0; i < 8; i++)
+    // int a[8] = {1, 6, 75, 3, 87, 45, 34, 605};
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("Enter %d element of array:", i);
+        scanf("%d", &a[i]);
+    }
+
+    bubble_sort(a, n);
+
+    printf("Your Bubble Sorted Array is \n");
+
+    for (int i = 0; i < n; i++)
     {
         printf("%d\t", a[i]);
     }
+
+    printf("\n");
+    printf("\n");
+    printf("Your Bubble Sorted array Time complexity is O(%d)",n*n);
 
     return 0;
 }

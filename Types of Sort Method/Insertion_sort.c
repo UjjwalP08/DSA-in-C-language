@@ -21,18 +21,29 @@ void insertion_sort(int a[], int n)
 
 int main()
 {
+    int n;
 
-    int a[8] = {1, 6, 75, 34, 87, 45, 30, 65};
+    printf("Enter Your size array:- ");
+    scanf("%d", &n);
+    printf("\n");
 
-    insertion_sort(a, 8);
+    int a[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("Enter %d element of array:", i);
+        scanf("%d", &a[i]);
+    }
+
+    insertion_sort(a, n);
 
     printf("Sorted Array is \n");
+    
 
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < n; i++)
     {
         printf("%d\t", a[i]);
     }
 
     return 0;
-    
 }

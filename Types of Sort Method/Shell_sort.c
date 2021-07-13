@@ -35,13 +35,27 @@ void shell_sort(int a[], int n)
 int main()
 {
 
-    int a[8] = {1, 6, 75, 34, 87, 45, 30, 65};
+    // int a[8] = {1, 6, 75, 34, 87, 45, 30, 65};
 
-    shell_sort(a, 8);
+    int n;
+
+    printf("Enter Your size array:- ");
+    scanf("%d", &n);
+    printf("\n");
+
+    int a[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("Enter %d element of array:", i);
+        scanf("%d", &a[i]);
+    }
+
+    shell_sort(a, n);
 
     printf("Sorted Array is \n");
 
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < n; i++)
     {
         printf("%d\t", a[i]);
     }

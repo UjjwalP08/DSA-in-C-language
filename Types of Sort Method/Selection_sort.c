@@ -31,16 +31,33 @@ void selection_sort(int a[], int n)
 int main()
 {
 
-    int a[8] = {1, 6, 75, 3, 87, 45, 34, 605};
+    int n;
 
-    selection_sort(a, 8);
+    printf("Enter value which you want to crete an array:");
+    scanf("%d", &n);
+    printf("\n");
+
+    int a[n];
+
+    // int a[8] = {1, 6, 75, 3, 87, 45, 34, 605};
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("Enter %d element of array:", i);
+        scanf("%d", &a[i]);
+    }
+
+    selection_sort(a, n);
 
     printf("Sorted Array is \n");
 
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < n; i++)
     {
         printf("%d\t", a[i]);
     }
 
+    printf("\n");
+    printf("\n");
+    printf("Time complxity of given an array is O(%d)", n * n);
     return 0;
 }
